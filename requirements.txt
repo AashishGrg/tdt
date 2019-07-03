@@ -1,0 +1,8 @@
+django==2.1
+djangorestframework
+coreapi
+mysqlclient
+parse
+django_templated_email
+djangorestframework-jwt
+django-rest-swagger

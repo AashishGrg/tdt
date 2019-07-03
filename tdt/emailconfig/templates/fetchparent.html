@@ -1,0 +1,101 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Fetch Parent</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+      function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!-- //Meta-Tags -->
+    <link
+      href="{% static 'css/popuo-box.css' %}"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!-- Style -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      media="all"
+    />
+    <!-- Fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- //Fonts -->
+  </head>
+
+  <body>
+    <h1></h1>
+    <div class="w3layoutscontaineragileits">
+      <h2>Fetch Parent</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <P>
+          <label for="{{ form.your_email.id_for_label }}"></label>
+          {{ form.your_email.errors }}
+          <input
+            type="text"
+            name="your_email"
+            id="id_your_email"
+            placeholder="Enter your email address"
+          />
+        </P>
+        <P
+          ><label for="{{ form.parent_email.id_for_label }}"></label>
+          {{ form.parent_email.errors }}
+          <input
+            type="text"
+            name="parent_email"
+            id="id_parent_email"
+            placeholder="Enter parent email address"
+          />
+        </P>
+        <center><input type="submit" value="Fetch Parent" /></center>
+        <div class="aitssendbuttonw3ls">
+          <p>
+            To register new account <span>→</span>
+            <a href="{% url 'authentication:user_signup' %}"> Click Here</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <script
+      type="text/javascript"
+      src="{% static 'js/jquery-2.1.4.min.js' %}"
+    ></script>
+    <!-- pop-up-box-js-file -->
+    <script
+      src="{% static 'js/jquery.magnific-popup.js' %}"
+      type="text/javascript"
+    ></script>
+    <!--//pop-up-box-js-file -->
+    <script>
+      $(document).ready(function() {
+        $(".w3_play_icon,.w3_play_icon1,.w3_play_icon2").magnificPopup({
+          type: "inline",
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: "auto",
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in"
+        });
+      });
+    </script>
+  </body>
+</html>
